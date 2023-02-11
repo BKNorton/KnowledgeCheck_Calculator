@@ -64,28 +64,19 @@ namespace KnowledgeCheck1_Calculator
         }
 
         //Perform operation and assign outcome, using class variables
+        //Requires that Number1, Number2, and Operator has been assigned  
         public void Operate()
         {
-            if (Operator == '+')
+            switch(Operator)
             {
-                Answer = calculator.Add(Number1, Number2).ToString();
-            }
-            else if (Operator == '-')
-            {
-                Answer = calculator.Subtract(Number1, Number2).ToString();
-            }
-            else if (Operator == '*')
-            {
-                Answer = calculator.Multiply(Number1, Number2).ToString();
-            }
-            else if (Operator == '/')
-            {
-                Answer = Math.Round(calculator.Divide(Number1, Number2), 2).ToString();
-            }
-            else
-            {
-                Console.WriteLine("Something went wrong.");
-                Answer = "";
+                case '+': Answer = calculator.Add(Number1, Number2).ToString(); break;
+                case '-': Answer = calculator.Subtract(Number1, Number2).ToString(); break;
+                case '*': Answer = calculator.Multiply(Number1, Number2).ToString(); break;
+                case '/': Answer = Math.Round(calculator.Divide(Number1, Number2), 2).ToString(); break;
+                default:
+                    Console.WriteLine("Something went wrong.");
+                    Answer = "";
+                    break;
             }
         }
 
