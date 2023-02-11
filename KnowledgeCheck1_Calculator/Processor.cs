@@ -80,7 +80,7 @@ namespace KnowledgeCheck1_Calculator
             }
             else if (Operator == '/')
             {
-                Answer = calculator.Divide(Number1, Number2).ToString();
+                Answer = Math.Round(calculator.Divide(Number1, Number2), 2).ToString();
             }
             else
             {
