@@ -11,6 +11,7 @@ namespace KnowledgeCheck1_Calculator
         public string Answer;
 
         //Prompt the user to enter two integers and save them to the class variables Number1 and Number2
+        //Returns true if user input is validated
         public bool SelectOperands()
         {
             Console.WriteLine("Enter 2 integers");
@@ -34,6 +35,7 @@ namespace KnowledgeCheck1_Calculator
         }
 
         //Promt the user to select an operator
+        //Returns true if user input is valid
         public bool SelectOperator()
         {
             Console.WriteLine("Hello. Press 1 for addition, 2 for subtraction, 3 for multiplication, and 4 for division");
